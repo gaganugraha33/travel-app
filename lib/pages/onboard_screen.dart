@@ -36,29 +36,43 @@ class _OnboardScreenState extends State<OnboardScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            onboardList.length - 1 != index
-                                ? Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      vertical: 7,
-                                      horizontal: 15,
+                            GestureDetector(
+                              onTap: () {
+                                if (pageController.hasClients) {
+                                  pageController.animateToPage(
+                                      onboardList.length - 1,
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                      curve: Curves.easeInOut);
+                                }
+                              },
+                              child: Visibility(
+                                visible: onboardList.length - 1 != index
+                                    ? true
+                                    : false,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    vertical: 7,
+                                    horizontal: 15,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      width: 1.5,
+                                      color: Colors.white,
                                     ),
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        width: 1.5,
-                                        color: Colors.white,
-                                      ),
-                                      borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: const Text(
+                                    'Skip',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
                                     ),
-                                    child: const Text(
-                                      'Skip',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ),
-                                  )
-                                : Container(),
+                                  ),
+                                ),
+                              ),
+                            ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
