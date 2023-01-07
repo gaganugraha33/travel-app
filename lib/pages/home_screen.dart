@@ -23,6 +23,59 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          leadingWidth: 120,
+          leading: Row(
+            children: const [
+              Icon(
+                Icons.location_on,
+                color: Colors.black,
+              ),
+              Text(
+                'Jawa Timur',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                ),
+              )
+            ],
+          ),
+          actions: [
+            Container(
+              margin: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(13),
+                border: Border.all(
+                  width: 2,
+                  color: Colors.black.withOpacity(0.5),
+                ),
+              ),
+              padding: const EdgeInsets.all(5),
+              child: Stack(
+                children: [
+                  const Icon(
+                    Icons.notifications_outlined,
+                    color: Colors.black,
+                  ),
+                  Positioned(
+                      top: 5,
+                      right: 5,
+                      child: Container(
+                        height: 6,
+                        width: 6,
+                        decoration: const BoxDecoration(
+                          color: Colors.red,
+                          shape: BoxShape.circle,
+                        ),
+                      ))
+                ],
+              ),
+            )
+          ],
+        ),
         backgroundColor: Colors.grey.shade200,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
