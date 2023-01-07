@@ -34,5 +34,19 @@ List<DestinationModel> destinations = [
     category: 'popular',
     location: 'Bali, indonesia',
     rate: 4.6,
-  )
+  ),
+  DestinationModel(
+    id: 2,
+    price: Random().nextInt(95) + 23,
+    review: Random().nextInt(300) + 25,
+    image: [
+      'gunung bromo.jpg',
+    ],
+    name: 'Bromo Mountain',
+    description:
+        'The Bromo, or Mount Bromo is an active somma volcano and part of the Tengger mountains, in East Java, Indonesia. At 2,329 meters it is not the highest peak of the massif, but the most famous.',
+    category: 'popular',
+    location: 'Malang, indonesia',
+    rate: 4.6,
+  ),
 ];
