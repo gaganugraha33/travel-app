@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/constant/dictionary.dart';
 import 'package:travel_app/model/onboard_model.dart';
 import 'package:travel_app/pages/home_screen.dart';
 
@@ -63,9 +64,9 @@ class _OnboardScreenState extends State<OnboardScreen> {
                                     ),
                                     borderRadius: BorderRadius.circular(10),
                                   ),
-                                  child: const Text(
-                                    'Skip',
-                                    style: TextStyle(
+                                  child: Text(
+                                    Dictionary.skip,
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w400,
@@ -76,21 +77,21 @@ class _OnboardScreenState extends State<OnboardScreen> {
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
+                              children: [
                                 Text(
-                                  'Explore indonesia with us.',
-                                  style: TextStyle(
+                                  Dictionary.title,
+                                  style: const TextStyle(
                                     fontSize: 72,
                                     color: Colors.white,
                                     fontWeight: FontWeight.w300,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Text(
-                                  'We Travelin are ready to help you on\n vacation around Indonesia',
-                                  style: TextStyle(
+                                  Dictionary.desc,
+                                  style: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.white,
@@ -165,19 +166,19 @@ class _OnboardScreenState extends State<OnboardScreen> {
                           child: Center(
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
+                              children: [
                                 Text(
-                                  'Let\'s Get Started',
-                                  style: TextStyle(
+                                  Dictionary.started,
+                                  style: const TextStyle(
                                     fontSize: 16,
                                     color: Colors.white,
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
-                                Icon(
+                                const Icon(
                                   Icons.arrow_forward,
                                   color: Colors.white,
                                   size: 20,
@@ -192,13 +193,13 @@ class _OnboardScreenState extends State<OnboardScreen> {
                       ),
                       Text.rich(TextSpan(children: [
                         TextSpan(
-                            text: 'already have account? ',
+                            text: Dictionary.haveAccount,
                             style: TextStyle(
                                 color: Colors.black.withOpacity(0.6),
                                 fontSize: 12)),
-                        const TextSpan(
-                            text: 'Login',
-                            style: TextStyle(
+                        TextSpan(
+                            text: Dictionary.login,
+                            style: const TextStyle(
                               fontSize: 12,
                               color: Colors.blue,
                               fontWeight: FontWeight.w600,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/component/destination_slider.dart';
+import 'package:travel_app/constant/dictionary.dart';
 import 'package:travel_app/model/destination_model.dart';
 import 'package:travel_app/pages/detail_screen.dart';
 import '../component/destination_list.dart';
@@ -29,14 +30,14 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.white,
           leadingWidth: 120,
           leading: Row(
-            children: const [
-              Icon(
+            children: [
+              const Icon(
                 Icons.location_on,
                 color: Colors.black,
               ),
               Text(
-                'Jawa Timur',
-                style: TextStyle(
+                Dictionary.indonesia,
+                style: const TextStyle(
                   fontSize: 18,
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
@@ -87,17 +88,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
-                    'Popular Place',
-                    style: TextStyle(
+                    Dictionary.popularPlace,
+                    style: const TextStyle(
                         fontSize: 16,
                         color: Colors.black,
                         fontWeight: FontWeight.w600),
                   ),
                   Text(
-                    'See All',
-                    style: TextStyle(
+                    Dictionary.seeAll,
+                    style: const TextStyle(
                         fontSize: 12,
                         color: Colors.blue,
                         fontWeight: FontWeight.w600),
@@ -140,17 +141,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
-                    'Recomendation for you',
-                    style: TextStyle(
+                    Dictionary.recomendationForYou,
+                    style: const TextStyle(
                         fontSize: 16,
                         color: Colors.black,
                         fontWeight: FontWeight.w600),
                   ),
                   Text(
-                    'See All',
-                    style: TextStyle(
+                    Dictionary.seeAll,
+                    style: const TextStyle(
                         fontSize: 12,
                         color: Colors.blue,
                         fontWeight: FontWeight.w600),

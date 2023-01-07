@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/constant/dictionary.dart';
 import 'package:travel_app/model/destination_model.dart';
 
 import '../component/bg_blur.dart';
@@ -42,9 +43,9 @@ class _DetailScreenState extends State<DetailScreen> {
             color: Colors.black,
           ),
         ),
-        title: const Text(
-          'Detail Place',
-          style: TextStyle(
+        title: Text(
+          Dictionary.detailPlace,
+          style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w600,
             color: Colors.black,
@@ -303,17 +304,17 @@ class _DetailScreenState extends State<DetailScreen> {
                     children: [
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.5,
-                        child: const TabBar(
+                        child: TabBar(
                           labelColor: Colors.blue,
                           unselectedLabelColor: Colors.black,
                           indicatorColor: Colors.blue,
                           indicatorSize: TabBarIndicatorSize.label,
                           tabs: [
                             Tab(
-                              text: 'Overview',
+                              text: Dictionary.overView,
                             ),
                             Tab(
-                              text: 'Review',
+                              text: Dictionary.review,
                             )
                           ],
                         ),
@@ -332,8 +333,8 @@ class _DetailScreenState extends State<DetailScreen> {
                                 ),
                               ),
                             ),
-                            const Center(
-                              child: Text('Review'),
+                            Center(
+                              child: Text(Dictionary.review),
                             ),
                           ],
                         ),
@@ -373,7 +374,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Price',
+                        Dictionary.price,
                         style: TextStyle(
                           color: Colors.black.withOpacity(0.5),
                           fontSize: 12,
@@ -394,7 +395,7 @@ class _DetailScreenState extends State<DetailScreen> {
                               ),
                             ),
                             TextSpan(
-                              text: ' / Person',
+                              text: Dictionary.person,
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.black.withOpacity(0.6),
@@ -418,17 +419,17 @@ class _DetailScreenState extends State<DetailScreen> {
                         child: Center(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
+                            children: [
+                              const Icon(
                                 Icons.confirmation_num_outlined,
                                 color: Colors.white,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 5,
                               ),
                               Text(
-                                'Book Ticket',
-                                style: TextStyle(
+                                Dictionary.bookTicket,
+                                style: const TextStyle(
                                   fontSize: 16,
                                   color: Colors.white,
                                   fontWeight: FontWeight.w400,

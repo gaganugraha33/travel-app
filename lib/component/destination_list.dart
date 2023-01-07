@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/constant/dictionary.dart';
 import 'package:travel_app/model/destination_model.dart';
 
 class DestinationList extends StatelessWidget {
@@ -116,7 +117,7 @@ class DestinationList extends StatelessWidget {
                           color: Colors.blue,
                         )),
                     TextSpan(
-                        text: ' / Person',
+                        text: Dictionary.person,
                         style: TextStyle(
                           color: Colors.black.withOpacity(0.6),
                           fontSize: 12,
