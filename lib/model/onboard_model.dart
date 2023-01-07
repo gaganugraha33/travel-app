@@ -5,8 +5,8 @@ class OnboardModel {
 }
 
 List<OnboardModel> onboardList = [
-  OnboardModel(image: 'pantai kelingking.jpg'),
-  OnboardModel(image: 'pantai kelingking.jpg'),
-  OnboardModel(image: 'pantai kelingking.jpg'),
+  OnboardModel(image: 'gunung bromo.jpg'),
+  OnboardModel(image: 'bali pagoda.jpg'),
+  OnboardModel(image: 'danau toba.jpeg'),
   OnboardModel(image: 'pantai kelingking.jpg'),
 ];

@@ -17,22 +17,22 @@ class DestinationModel {
     required this.location,
     required this.rate,
   });
-
-  List<DestinationModel> destinations = [
-    DestinationModel(
-      id: 1,
-      price: Random().nextInt(95) + 23,
-      review: Random().nextInt(300) + 25,
-      image: [
-        '',
-        '',
-        '',
-      ],
-      name: 'Gunung Kerinci',
-      description: 'Gunung Kerinci mantapp',
-      category: 'popular',
-      location: 'Jambi, indonesia',
-      rate: 4.6,
-    )
-  ];
 }
+
+List<DestinationModel> destinations = [
+  DestinationModel(
+    id: 1,
+    price: Random().nextInt(95) + 23,
+    review: Random().nextInt(300) + 25,
+    image: [
+      'bali pagoda.jpg',
+      'bali pagoda.jpg',
+    ],
+    name: 'Bratan Lake',
+    description:
+        'Upcountry lake with a famed waterfront Hindu temple, Ulun Danu Beratan, plus boating & restaurants.',
+    category: 'popular',
+    location: 'Bali, indonesia',
+    rate: 4.6,
+  )
+];

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/model/onboard_model.dart';
+import 'package:travel_app/pages/home_screen.dart';
 
 class OnboardScreen extends StatefulWidget {
   const OnboardScreen({Key? key}) : super(key: key);
@@ -88,7 +89,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
                                   height: 20,
                                 ),
                                 Text(
-                                  'We Traveling are ready to help you on\n vacation around Indonesia',
+                                  'We Travelin are ready to help you on\n vacation around Indonesia',
                                   style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400,
@@ -147,33 +148,42 @@ class _OnboardScreenState extends State<OnboardScreen> {
                   padding: const EdgeInsets.fromLTRB(30, 20, 30, 5),
                   child: Column(
                     children: [
-                      Container(
-                        height: 70,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.black,
-                        ),
-                        child: Center(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                'Let\'s Get Started',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w400,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const HomeScreen()),
+                              (route) => false);
+                        },
+                        child: Container(
+                          height: 70,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.black,
+                          ),
+                          child: Center(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  'Let\'s Get Started',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Icon(
-                                Icons.arrow_forward,
-                                color: Colors.white,
-                                size: 20,
-                              ),
-                            ],
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Icon(
+                                  Icons.arrow_forward,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
