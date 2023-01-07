@@ -73,7 +73,7 @@ class DestinationList extends StatelessWidget {
                   children: [
                     const Icon(
                       Icons.star_rounded,
-                      color: Colors.yellow,
+                      color: Colors.orangeAccent,
                       size: 16,
                     ),
                     const SizedBox(

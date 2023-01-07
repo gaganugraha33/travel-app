@@ -49,10 +49,10 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(13),
+                borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  width: 2,
-                  color: Colors.black.withOpacity(0.5),
+                  width: 1,
+                  color: Colors.black.withOpacity(0.1),
                 ),
               ),
               padding: const EdgeInsets.all(5),
@@ -163,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Expanded(
                   child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 9),
                 child: Column(
                   children: List.generate(
                     destinations.length,
@@ -171,8 +171,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: index == 0
                           ? const EdgeInsets.only(top: 15, bottom: 15)
                           : const EdgeInsets.only(bottom: 15),
-                      child: DestinationList(
-                        destinationModel: destinations[index],
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DetailScreen(
+                                  destinationModel: destinations[index]),
+                            ),
+                          );
+                        },
+                        child: DestinationList(
+                          destinationModel: destinations[index],
+                        ),
                       ),
                     ),
                   ),

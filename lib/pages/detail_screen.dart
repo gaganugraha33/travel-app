@@ -28,19 +28,25 @@ class _DetailScreenState extends State<DetailScreen> {
         backgroundColor: Colors.white,
         centerTitle: true,
         elevation: 0,
-        leading: Container(
-          padding: const EdgeInsets.all(5),
-          margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-              width: 2,
-              color: Colors.black.withOpacity(0.5),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+            alignment: Alignment.center,
+            padding: const EdgeInsets.all(4),
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(
+                width: 1,
+                color: Colors.black.withOpacity(0.1),
+              ),
             ),
-          ),
-          child: const Icon(
-            Icons.arrow_back_ios,
-            color: Colors.black,
+            child: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+            ),
           ),
         ),
         title: Text(
@@ -53,13 +59,13 @@ class _DetailScreenState extends State<DetailScreen> {
         ),
         actions: [
           Container(
-            padding: const EdgeInsets.all(5),
+            padding: const EdgeInsets.all(4),
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                width: 2,
-                color: Colors.black.withOpacity(0.5),
+                width: 1,
+                color: Colors.black.withOpacity(0.1),
               ),
             ),
             child: const Icon(
@@ -261,7 +267,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                                 children: [
                                                   const Icon(
                                                     Icons.star_rounded,
-                                                    color: Colors.yellow,
+                                                    color: Colors.orangeAccent,
                                                     size: 20,
                                                   ),
                                                   Text(
