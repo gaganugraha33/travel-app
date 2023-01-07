@@ -26,7 +26,7 @@ List<DestinationModel> destinations = [
     review: Random().nextInt(300) + 25,
     image: [
       'bali pagoda.jpg',
-      'bali pagoda.jpg',
+      'gunung bromo.jpg',
     ],
     name: 'Bratan Lake',
     description:

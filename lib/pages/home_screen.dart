@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/component/destination_slider.dart';
 import 'package:travel_app/model/destination_model.dart';
+import 'package:travel_app/pages/detail_screen.dart';
 import '../component/destination_list.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -116,8 +117,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: index == 0
                           ? const EdgeInsets.only(left: 10, right: 10)
                           : const EdgeInsets.only(right: 10),
-                      child: DestinationSlider(
-                        destinationModel: destinations[index],
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DetailScreen(
+                                  destinationModel: destinations[index]),
+                            ),
+                          );
+                        },
+                        child: DestinationSlider(
+                          destinationModel: destinations[index],
+                        ),
                       ),
                     ),
                   ),
