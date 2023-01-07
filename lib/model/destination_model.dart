@@ -49,4 +49,46 @@ List<DestinationModel> destinations = [
     location: 'Malang, indonesia',
     rate: 4.6,
   ),
+  DestinationModel(
+    id: 3,
+    price: Random().nextInt(95) + 21,
+    review: Random().nextInt(300) + 18,
+    image: [
+      'danau toba.jpeg',
+    ],
+    name: 'Lake Toba',
+    description:
+        'Lake Toba is a large natural lake in North Sumatra, Indonesia, occupying the caldera of a supervolcano.',
+    category: 'popular',
+    location: 'Sumatra Utara, indonesia',
+    rate: 4.5,
+  ),
+  DestinationModel(
+    id: 4,
+    price: Random().nextInt(95) + 21,
+    review: Random().nextInt(300) + 18,
+    image: [
+      'pantai kelingking.jpg',
+    ],
+    name: 'Kelingking Beach',
+    description:
+        'Kelingking Beach is one of the most famous spot of Nusa Penida. Major travel sites use its photo to advertise Bali and even sometimes Indonesia.',
+    category: 'popular',
+    location: 'Bali, indonesia',
+    rate: 4.8,
+  ),
+  DestinationModel(
+    id: 5,
+    price: Random().nextInt(95) + 21,
+    review: Random().nextInt(300) + 18,
+    image: [
+      'raja ampat.jpeg',
+    ],
+    name: 'Raja Ampat',
+    description:
+        'The Raja Ampat Islands are an Indonesian archipelago off the northwest tip of Bird’s Head Peninsula in West Papua. Comprising hundreds of jungle-covered islands, Raja Ampat is known for its beaches and coral reefs rich with marine life. Ancient rock paintings and caves are on Misool Island, while the crimson bird of paradise lives on Waigeo Island. Batanta and Salawati are the archipelago’s other main islands.',
+    category: 'popular',
+    location: 'Papua, indonesia',
+    rate: 4.4,
+  ),
 ];
